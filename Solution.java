@@ -1,17 +1,20 @@
-    import java.util.*;
-    public class Solution{
-        public static void main(String[] args){
-          int n = 7;
-          int bin =0;
-          int pow =0;
-          while(n>0){
-            int last_digit = n%2;
-            bin = bin +(int)Math.pow(10,pow)*last_digit;
-            n/=2;
-            pow++;
-        
-          }
-          System.out.println(bin);
+import java.util.*;
 
-        }
+public class Solution {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[] arr = { 2, 4, 6, 8, 10 };
+    int current_sum = 0;
+    int max_sum = Integer.MIN_VALUE;
+    for(int i=0;i<arr.length;i++){
+      current_sum+=arr[i];
+      if(current_sum<0){
+        current_sum = 0;
+      }
+
+      max_sum= Math.max(max_sum,current_sum);
     }
+    
+    System.out.println(max_sum);
+  }
+}

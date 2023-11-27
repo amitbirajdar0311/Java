@@ -17,7 +17,7 @@ public class Solution{
       else{
         y--;
       }
-
+//this is directino 
     }
 
     System.out.println("shortest path is " + Math.sqrt((x*x) + (y*y)));
